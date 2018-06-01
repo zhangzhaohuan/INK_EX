@@ -1,5 +1,7 @@
 
 {
+  "login":"登陆",
+  "register":"注册",
   "SIMPLE": "简单的句子",
   "HELLO": "你好, {name}。欢迎来到{where}!",
   "TIP": "这是<span style='color:red'>HTML</span>",

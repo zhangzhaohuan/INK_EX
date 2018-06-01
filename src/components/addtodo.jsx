@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { observer,inject } from 'mobx-react'
+import { observer, inject } from 'mobx-react'
 @inject('todolist')
 @observer
 class AddTodo extends Component {
-  componentDidMount(){
+  componentDidMount() {
     console.log(this.props.todolist);
   }
-  render () {
+  render() {
     let { todolist } = this.props
     console.log('pp');
-    
+
     return (
       <div className="add-todo">
         <input

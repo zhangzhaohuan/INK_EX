@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import { Provider } from 'mobx-react';
 import { observer, inject } from 'mobx-react'
 import logo from './logo.svg';
@@ -15,15 +15,11 @@ import intl from 'react-intl-universal';
 import IntlPolyfill from "intl";
 
 
-
-
 import Home from './components/home'
 import Login from './components/login'
 import Register from './components/register'
 import store from './store';
-import './App.css';
-import './App.less';
-import './App.scss';
+import './styles/index.scss';
 
 //universal国际化文件
 const intl_locales = {
@@ -44,12 +40,10 @@ require('intl/locale-data/jsonp/fr.js');
 require('intl/locale-data/jsonp/ja.js');
 
 
-@inject('intl')
 @observer
 class App extends Component {
   constructor(props) {
     super(props);
-    this.intl = this.props.intl;
   }
 
   componentWillMount() {
@@ -75,7 +69,7 @@ class App extends Component {
       }
     }).then(() => {
       // After loading CLDR locale data, start to render
-      this.intl.lanFlag = !this.intl.lanFlag;
+      // this.intl.lanFlag = !this.intl.lanFlag;
       // window.location.reload();
     })
   }
@@ -92,7 +86,8 @@ class App extends Component {
               <Switch>
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
-                <Route path="/" component={Home} />
+                <Route path="/app" component={Home} />
+                {/* <Route render={() => <Redirect to="/404" />} /> */}
               </Switch>
             </Router>
           </div>

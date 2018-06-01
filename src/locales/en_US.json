@@ -1,4 +1,6 @@
 {
+  "login":"Log In",
+  "register":"Sign Up",
   "SIMPLE": "Simple Sentence",
   "HELLO": "Hello, {name}. Welcome to {where}!",
   "TIP": "This is <span style='color:red'>HTML</span>",

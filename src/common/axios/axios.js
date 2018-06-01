@@ -31,9 +31,9 @@ export async function ipTokenList() {
 export async function test() {
   const url = '/mock';
   const params = {
-    pagesize:50
+    pagesize: 50
   }
-  const rs = await get(url,params);
+  const rs = await get(url, params);
   return rs || {};
 }
 

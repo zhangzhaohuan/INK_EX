@@ -1,0 +1,80 @@
+.home {
+  .ant-layout-header {
+    position: relative;
+    height: 60px;
+    padding: 0;
+    line-height: 60px;
+    background: #FFF;
+    color: #FFF;
+    background-image: linear-gradient(to right, #5560eb, #57c9e6);
+    .logo {
+      position: absolute;
+      left: 132px;
+      width: 134px;
+      background: red;
+    }
+    .nav {
+      position: absolute;
+      left: 333px;
+      height: 60px;
+      li {
+        float: left;
+        width: 76px;
+        text-align: center;
+        margin-right: 24px;
+        a {
+          color: #FFF;
+          padding: 8px 0;
+        }
+        a:hover {
+          color: #0cc3f9;
+        }
+      } // .ant-menu-horizontal {
+      //   height: 60px;
+      //   border: 0;
+      //   line-height: 60px;
+      //   background: yellow;
+      //   .ant-menu-item {
+      //     margin-right: 24px;
+      //   }
+      // }
+      // .nav-item {
+      //   // display: inline-block;
+      //   height: 32px;
+      //   width: 76px;
+      //   text-align: center;
+      //   background: red;
+      // }
+    }
+    .support {
+      position: absolute;
+      right: 619px;
+    }
+    .right {
+      position: absolute;
+      right: 132px;
+      .but_primary {
+        width: 76px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        padding: 0;
+        margin-left: 24px;
+        color: #FFF;
+      }
+      .but_login {
+        // opacity: 0.1;
+      }
+      .but_sign {
+        background-color: #0db4e6;
+      } // .ant-btn {
+      //   width: 76px;
+      //   height: 32px; // color: red;
+      //   // border: 2px solid #fff;
+      //   // border-radius: 2px;
+      //   background-color: #0db4e6;
+      //   color: #FFF;
+      // }
+    }
+  }
+}
