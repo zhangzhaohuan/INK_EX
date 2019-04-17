@@ -1,0 +1,31 @@
+.account-balance{
+  .title{
+    position: relative;
+    // height: 50px;
+    h3{
+      color: 242526;
+      font-size: 18px;
+      line-height: 32px;
+    }
+    .ant-select{
+      position: absolute;
+      right: 0px;
+      top: 0;
+    }
+  }
+  .query{
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    .right{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .ant-pagination{
+    text-align: center;
+    margin-top:15px;
+  } 
+}

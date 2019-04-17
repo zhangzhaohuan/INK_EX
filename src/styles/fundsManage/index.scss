@@ -1,2 +1,6 @@
-body {
-}
+@import 'fundsManage'; //资金管理模块的基础样式  
+@import 'accountBalance';
+@import 'addressManage';
+@import 'deposit';
+@import 'records';
+@import 'withdraw';

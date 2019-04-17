@@ -1,0 +1,71 @@
+@mixin box-sizing ($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  -o-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+@mixin box-shadow ($a, $b, $c, $d) {
+  -webkit-box-shadow: $a $b $c $d;
+  -moz-box-shadow: $a $b $c $d;
+  -o-box-shadow: $a $b $c $d;
+  box-shadow: $a $b $c $d;
+}
+
+@mixin linear-gradient ($direction, $from, $to) {
+  background-image: -webkit-linear-gradient(to $direction, $from, $to);
+  background-image: -moz-linear-gradient(to $direction, $from, $to);
+  background-image: -o-linear-gradient(to $direction, $from, $to);  
+  background-image: linear-gradient(to $direction, $from, $to)
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  // color:#000;
+}
+
+button {
+  border: 0;
+}
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+p,
+span,
+blockquote,
+th,
+td {
+  color:#7f8fa4;
+}

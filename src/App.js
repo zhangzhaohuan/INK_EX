@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-ro
 import { Provider } from 'mobx-react';
 import { observer, inject } from 'mobx-react'
 import logo from './logo.svg';
-import { setCookie, getCookie } from 'common/cookie.js'
+import { setCookie, getCookie } from 'common/cookie.js';
 
 // antd国际化配置
 import { LocaleProvider } from 'antd';
@@ -14,10 +14,11 @@ import en_US from 'antd/lib/locale-provider/en_US';
 import intl from 'react-intl-universal';
 import IntlPolyfill from "intl";
 
-
 import Home from './components/home'
 import Login from './components/login'
 import Register from './components/register'
+import Exchange from './components/exchange'
+import PrivateRoute from './components/common/privateRoute'
 import store from './store';
 import './styles/index.scss';
 
@@ -85,8 +86,11 @@ class App extends Component {
             <Router>
               <Switch>
                 <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
-                <Route path="/app" component={Home} />
+                {/* <Route path="/register" component={Register} /> */}
+                <PrivateRoute path="/register" component={Register} />
+                <Route path="/exchange" component={Exchange} />
+                <Route path="/" component={Home} />
+
                 {/* <Route render={() => <Redirect to="/404" />} /> */}
               </Switch>
             </Router>

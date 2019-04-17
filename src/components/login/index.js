@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import Intluniversal from '../intl-universal'
-import BB from '../intl-universal/component/BB'
+import intl from 'react-intl-universal';
 export default class Login extends Component {
 
   render() {
     return (
       <div>
-        <Intluniversal />
-        <BB />
+        <span>{intl.get('Login')}</span>
       </div>
     )
   }

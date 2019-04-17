@@ -39,8 +39,29 @@ export async function request(method, url, params, opts) {
   } else {
     config = Object.assign(config, { "data": params })
   }
-  const res = await axios(config);
-  return res;
+  axios.interceptors.request.use(function (config) {
+    //在请求发出之前进行一些操作
+    return config;
+  }, function (err) {
+    //Do something with request error
+    console.log(err);
+    return Promise.reject(error);
+  });
+  axios.interceptors.response.use(function (response) {
+    // Do something with response data
+    return response;
+  }, function (error) {
+    // Do something with response error
+    return Promise.reject(error);
+  });
+  try {
+    const res = await axios(config);
+    return res;
+  } catch (e) {
+    console.log(e);
+    return {};
+  }
+
 }
 
 /**
@@ -65,3 +86,28 @@ request.request = request;
 request.get = get;
 request.post = post;
 export default request;
+
+
+// 复制代码
+// let fetcher = axios.create({
+//   timeout: 6000, // 设置请求超时时间6s
+//   baseURL: baseUrl,
+// })
+
+// fetcher.interceptors.request.use(function (config) {
+//   config.headers.ssotoken = storage.get('ssotoken')
+//   config.headers.ssouid = storage.get('ssouid')
+//   return config
+// }, function (error) {
+//   return Promise.reject(error)
+// })
+
+// fetcher.interceptors.response.use(function (response) {
+//   if (response.data.code === 2) {
+//     location.href = login
+//   }
+//   return response.data
+// }, function (error) {
+//   console.log(error.message)  // 统一处理错误信息
+//   return Promise.reject(error)
+// })

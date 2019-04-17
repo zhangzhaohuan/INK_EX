@@ -12,7 +12,9 @@ export default class Index extends Component {
 
   async componentDidMount() {
     const data = await test();
-    this.test.data = data.data;
+    console.log(data);
+    
+    this.test.data = data.data||[];
     // console.log(data);
   }
   render() {

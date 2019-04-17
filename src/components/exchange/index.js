@@ -5,6 +5,7 @@ export default class Exchange extends Component {
     return (
       <div>
         Exchange
+        
       </div>
     )
   }

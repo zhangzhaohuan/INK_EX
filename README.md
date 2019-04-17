@@ -21,7 +21,7 @@
   * 安装babel-plugin-import
   ```
   yarn add babel-plugin-import --dev   
-  或者
+  或
   npm i babel-plugin-import --save-dev
   ```
   * 打开webpack.config.dev添加 第149行

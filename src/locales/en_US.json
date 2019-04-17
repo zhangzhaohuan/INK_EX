@@ -1,6 +1,10 @@
 {
-  "login":"Log In",
-  "register":"Sign Up",
+  "Login":"Log In",
+  "Register":"Sign Up",
+  "Common_Problems":"Common Problems",
+  "Site_Notice":"Site Notice",
+  "Rate_Description":"Rate Description",
+  "Submit_Form":"Submit Form",
   "SIMPLE": "Simple Sentence",
   "HELLO": "Hello, {name}. Welcome to {where}!",
   "TIP": "This is <span style='color:red'>HTML</span>",
